@@ -22,8 +22,6 @@ const buildAdminRouter = (admin) => {
       if (company && await argon2.verify(company.encryptedPassword, password)) {
         return company.toJSON();
       }
-        
-
 
       if (email === '1' && password === '1') {
         return {
