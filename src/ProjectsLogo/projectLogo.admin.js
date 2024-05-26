@@ -20,6 +20,12 @@ const options = {
         list: AdminBro.bundle('./components/upload-image.list.tsx'),
       },
     },
+    certificate: {
+      components: {
+        edit: AdminBro.bundle('./components/upload-image.edit.tsx'),
+        list: AdminBro.bundle('./components/upload-image.list.tsx'),
+      },
+    },
   },
   actions: {
     new: {
@@ -45,6 +51,9 @@ const options = {
     show: {
       isVisible: false,
     },
+  },
+  navigation: {
+    icon: 'Manufacture',
   },
 };
 

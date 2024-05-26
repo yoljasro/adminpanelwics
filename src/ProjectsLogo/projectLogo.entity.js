@@ -4,19 +4,19 @@ const ProjectLogoSchema = new mongoose.Schema({
   image: {
     type: String,
   },
-  nameuz:{
+  nameuz: {
     type: String,
   },
-  nameru:{
-    type: String
+  siteLink: {
+    type: String,
   },
-  nameeng: {
-    type: String
+  instagram:{
+    type: String,
   },
-  siteLink:{
-    type: String
+  facebook:{
+    type: String,
   },
-  certificate:{
+  telegram: {
     type: String
   }
 });
