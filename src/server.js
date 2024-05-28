@@ -13,6 +13,7 @@ const {createClient , getAllClients} = require("./controllers/client.controller"
 const {createMotto , getAllMotto} = require("./controllers/motto.controller")
 const {createProjectLogo  , getAllProjectLogos} = require("./controllers/projectLogo.controller")
 const {createCommand , getAllCommand} = require("./controllers/command.controller")
+const {createForm , getAllForm} = require("./controllers/form.controller")
 
 app.use(cors());
 
@@ -46,7 +47,9 @@ const run = async () => {
   app.get("/", (req, res) => {
     res.send("hello world. I'm JasurBek");
   });
-
+  // form
+  app.post("/form" , createForm)
+  app.get("/form" , getAllForm)
   // companies
   app.post("/company", createCompany)
   app.get("/company", getAllCompanies)
