@@ -63,8 +63,8 @@ const run = async () => {
   app.post("/projectlogos" , createProjectLogo)
   app.get("/projectlogos" , getAllProjectLogos)
   // commands
-  app.post("/command " , createCommand)
-  app.get("/command" , getAllCommand)
+  // app.post("/command " , createCommand)
+  // app.get("/command" , getAllCommand)
 
   app.listen(port, () => console.log(
     `Example app listening at http://localhost:${port}`,

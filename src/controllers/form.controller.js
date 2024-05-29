@@ -4,7 +4,7 @@ const { Form } = require('../Form/form.entity');
 const createForm = async (req, res) => {
     try {
         const { name , surname , brandName, serviceType , phone , email } = req.body;
-        const newForm = new Command({ name , surname , brandName, serviceType , phone , email });
+        const newForm = new Form({ name , surname , brandName, serviceType , phone , email });
         await newForm.save();
         res.status(201).json(newForm);
     } catch (error) {
