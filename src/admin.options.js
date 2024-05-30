@@ -12,8 +12,10 @@ const CompanyCommand = require("./Command/command.admin")
 const Form = require("./Form/form.admin")
 const News = require("./News/news.admin")
 const Restaurant = require("./Restaurants/restaurants.admin")
+const Chefs = require("./Chefs/chefs.admin")
+const Members = require("./Members/members.admin")
 /** @type {import('admin-bro').AdminBroOptions} */
 const options = {
-  resources: [ CompanyLogo  , News , Form , Restaurant],
+  resources: [ CompanyLogo  , News , Form , Restaurant , Chefs , Members],
 };
 module.exports = options;

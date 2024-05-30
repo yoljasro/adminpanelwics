@@ -16,6 +16,8 @@ const {createCommand , getAllCommand} = require("./controllers/command.controlle
 const {createForm , getAllForm} = require("./controllers/form.controller")
 const {createNews , getAllNews} = require("./controllers/news.controller");
 const { createRestaurant , getAllRestaurants } = require('./controllers/restaurants.controller');
+const {createChefs , getAllChefs} = require("./controllers/chefs.controller")
+const {createMembers , getAllMembers}= require("./controllers/members.controller")
 
 app.use(cors());
 
@@ -73,6 +75,13 @@ const run = async () => {
   app.post("/restaurants" , createRestaurant)
   app.get("/restaurants" , getAllRestaurants)
   // commands
+  //chefs
+  app.post("/chefs" , createChefs)
+  app.get("/chefs" , getAllChefs)
+
+  //members
+  app.post("/members" , createMembers)
+  app.get("/members" , getAllMembers)
   // app.post("/command " , createCommand)
   // app.get("/command" , getAllCommand)
 
