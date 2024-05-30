@@ -14,6 +14,8 @@ const {createMotto , getAllMotto} = require("./controllers/motto.controller")
 const {createProjectLogo  , getAllProjectLogos} = require("./controllers/projectLogo.controller")
 const {createCommand , getAllCommand} = require("./controllers/command.controller")
 const {createForm , getAllForm} = require("./controllers/form.controller")
+const {createNews , getAllNews} = require("./controllers/news.controller");
+const { createRestaurant , getAllRestaurants } = require('./controllers/restaurants.controller');
 
 app.use(cors());
 
@@ -56,12 +58,20 @@ const run = async () => {
   // clients
   app.post("/clients" , createClient)
   app.get("/clients" , getAllClients)
+
   // motto
   app.post("/motto" , createMotto)
   app.get("/motto" , getAllMotto)
   // projectLogos
   app.post("/projectlogos" , createProjectLogo)
   app.get("/projectlogos" , getAllProjectLogos)
+
+  // news
+  app.post("/news" , createNews)
+  app.get("/news" , getAllNews)
+  //restaurants
+  app.post("/restaurants" , createRestaurant)
+  app.get("/restaurants" , getAllRestaurants)
   // commands
   // app.post("/command " , createCommand)
   // app.get("/command" , getAllCommand)
