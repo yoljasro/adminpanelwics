@@ -14,8 +14,9 @@ const News = require("./News/news.admin")
 const Restaurant = require("./Restaurants/restaurants.admin")
 const Chefs = require("./Chefs/chefs.admin")
 const Members = require("./Members/members.admin")
+const Gid = require("./GID/gid.admin")
 /** @type {import('admin-bro').AdminBroOptions} */
 const options = {
-  resources: [ CompanyLogo  , News , Form , Restaurant , Chefs , Members],
+  resources: [ CompanyLogo  , News , Form , Restaurant , Chefs , Members , Gid],
 };
 module.exports = options;

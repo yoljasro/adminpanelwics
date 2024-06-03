@@ -18,6 +18,7 @@ const {createNews , getAllNews} = require("./controllers/news.controller");
 const { createRestaurant , getAllRestaurants } = require('./controllers/restaurants.controller');
 const {createChefs , getAllChefs} = require("./controllers/chefs.controller")
 const {createMembers , getAllMembers}= require("./controllers/members.controller")
+const {createGid   , getAllGid} = require("./controllers/gid.controller")
 
 app.use(cors());
 
@@ -84,6 +85,9 @@ const run = async () => {
   app.get("/members" , getAllMembers)
   // app.post("/command " , createCommand)
   // app.get("/command" , getAllCommand)
+  // gid
+  app.post("/gid" , createGid)
+  app.get("/gid", getAllGid)
 
   app.listen(port, () => console.log(
     `Example app listening at http://localhost:${port}`,
