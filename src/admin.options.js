@@ -6,9 +6,6 @@ AdminBro.registerAdapter(AdminBroMongoose);
 // models
 const AdminCompany = require('./companies/company.admin');
 const CompanyLogo = require("./ProjectsLogo/projectLogo.admin")
-const CompanyClients = require("./Clients/client.admin")
-const CompanyMotto = require("./Motto/motto.admin")
-const CompanyCommand = require("./Command/command.admin")
 const Form = require("./Form/form.admin")
 const News = require("./News/news.admin")
 const Restaurant = require("./Restaurants/restaurants.admin")

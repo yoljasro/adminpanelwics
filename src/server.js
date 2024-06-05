@@ -14,7 +14,7 @@ const {createMotto , getAllMotto} = require("./controllers/motto.controller")
 const {createProjectLogo  , getAllProjectLogos} = require("./controllers/projectLogo.controller")
 const {createCommand , getAllCommand} = require("./controllers/command.controller")
 const {createForm , getAllForm} = require("./controllers/form.controller")
-const {createNews , getAllNews} = require("./controllers/news.controller");
+const {createNews , getAllNews , getNewsById} = require("./controllers/news.controller");
 const { createRestaurant , getAllRestaurants } = require('./controllers/restaurants.controller');
 const {createChefs , getAllChefs} = require("./controllers/chefs.controller")
 const {createMembers , getAllMembers}= require("./controllers/members.controller")
@@ -72,9 +72,10 @@ const run = async () => {
   // news
   app.post("/news" , createNews)
   app.get("/news" , getAllNews)
+  app.get("/news/:id" , getNewsById)
   //restaurants
-  app.post("/restaurants" , createRestaurant)
-  app.get("/restaurants" , getAllRestaurants)
+  app.post("/res" , createRestaurant)
+  app.get("/res" , getAllRestaurants)
   // commands
   //chefs
   app.post("/chefs" , createChefs)
